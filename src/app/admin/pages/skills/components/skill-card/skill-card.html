@@ -1,0 +1,14 @@
+<div class="skill-card">
+  <div class="skill-main">
+    <div>
+      <div class="name">{{ skill.name }}</div>
+      <div class="meta">{{ skill.category }}</div>
+      <div class="meta">Level: {{ skill.level }}%</div>
+    </div>
+
+    <div class="actions">
+      <button class="icon-btn" (click)="edit.emit(skill)">💾</button>
+      <button class="icon-btn danger" (click)="remove.emit(skill.id)">🗑️</button>
+    </div>
+  </div>
+</div>

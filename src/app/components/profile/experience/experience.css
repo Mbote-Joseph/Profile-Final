@@ -1,0 +1,115 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.experience-section {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(40px, 4vw, 56px);
+  font-weight: 800;
+  color: rgba(155, 135, 255, 0.95);
+  margin: 0 0 34px;
+}
+
+/* Glass card style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.exp-card {
+  padding: 28px 34px;
+}
+
+/* Header row inside card */
+.exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.role {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #62b2ff; /* blue title */
+}
+
+.company {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+
+.summary {
+  margin: 18px 0 14px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Bullet list */
+.bullets {
+  margin: 0;
+  padding-left: 22px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.bullets li {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .exp-card {
+    padding: 22px 20px;
+  }
+
+  .exp-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="overlay" (click)="onBackdrop($event)">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>{{ title }}</h3>
+      <button class="close" (click)="close.emit()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

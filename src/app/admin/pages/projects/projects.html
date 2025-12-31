@@ -1,0 +1,21 @@
+<div class="page-head">
+  <h2>Projects</h2>
+
+  <button class="primary-btn" (click)="openAdd()">+ Add Project</button>
+</div>
+
+<div class="list">
+  <app-project-row-card
+    *ngFor="let p of projects"
+    [project]="p"
+    (edit)="openEdit($event)"
+    (remove)="delete($event)"
+  ></app-project-row-card>
+</div>
+
+<app-project-modal
+  *ngIf="modalOpen"
+  [initial]="selected"
+  (close)="close()"
+  (save)="save($event)"
+></app-project-modal>

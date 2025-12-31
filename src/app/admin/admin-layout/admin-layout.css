@@ -1,0 +1,207 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+:root {
+  --bg: #f3f5f9;
+  --card: #ffffff;
+
+  --tab-text: #6b7280;
+  --tab-hover: #374151;
+  --tab-active: #2563eb;
+  --tab-border: #e5e7eb;
+
+  --danger: #e11d48;
+
+  --shadow-card: 0 18px 40px rgba(0,0,0,0.12);
+  --shadow-pill: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.admin-shell {
+  min-height: 100vh;
+  padding: 28px 24px 70px;
+  background: #f3f5f9;
+}
+
+.top-actions {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  display: flex;
+  gap: 14px;
+  z-index: 50;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 0;
+  background: #ffffff;
+  color: #1f2937;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+.pill-btn .ico {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.pill-btn.danger {
+  background: #e11d48;
+  color: #fff;
+}
+
+.admin-card {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.admin-hero {
+  padding: 34px 40px;
+  background: linear-gradient(90deg, #1d4ed8, #9333ea);
+  color: #fff;
+}
+
+.admin-hero h1 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.admin-hero p {
+  margin: 6px 0 0;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 34px;
+  padding: 18px 40px 0;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.tab {
+  padding: 14px 10px;
+  text-decoration: none;
+  color: #475569;
+  font-weight: 700;
+  position: relative;
+}
+
+.tab.active {
+  color: #2563eb;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 3px;
+}
+
+.admin-body {
+  padding: 28px 40px 42px;
+}
+
+@media (max-width: 720px) {
+  .admin-hero { padding: 28px 20px; }
+  .admin-body { padding: 22px 20px 30px; }
+  .tabs { padding: 12px 20px 0; gap: 18px; overflow-x: auto; }
+  .top-actions { position: static; margin-bottom: 16px; }
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px 6px 16px;
+  text-decoration: none;
+
+  color: var(--tab-text);
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.2px;
+}
+
+.tab-ico {
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.ico {
+  width: 30px;
+  height: 30px;
+  color: currentColor; /* important */
+}
+
+.tab.active {
+  color: var(--tab-active);
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--tab-active);
+}
+
+.tab:hover {
+  color: #374151;
+}
+.tab.active:hover {
+  color: var(--tab-active);
+}
+
+@media (max-width: 900px) {
+  .admin-tabs {
+    gap: 22px;
+    padding: 12px 16px 0;
+    overflow-x: auto;
+  }
+  .tab {
+    font-size: 18px;
+    padding: 14px 6px 12px;
+    white-space: nowrap;
+  }
+  .tab-ico, .ico {
+    width: 22px;
+    height: 22px;
+  }
+}
+

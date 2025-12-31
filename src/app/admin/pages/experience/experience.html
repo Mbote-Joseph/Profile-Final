@@ -1,0 +1,21 @@
+<div class="page-head">
+  <h2>Experience</h2>
+
+  <button class="primary-btn" (click)="openAdd()">+ Add Experience</button>
+</div>
+
+<div class="list">
+  <app-experience-row-card
+    *ngFor="let e of experiences"
+    [experience]="e"
+    (edit)="openEdit($event)"
+    (remove)="delete($event)"
+  ></app-experience-row-card>
+</div>
+
+<app-experience-modal
+  *ngIf="modalOpen"
+  [initial]="selected"
+  (close)="close()"
+  (save)="save($event)"
+></app-experience-modal>

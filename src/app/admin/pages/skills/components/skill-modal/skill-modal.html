@@ -1,0 +1,29 @@
+
+<div class="overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>{{ mode === 'edit' ? 'Edit Skill' : 'Add Skill' }}</h3>
+      <button type="button" (click)="close.emit()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <label>Skill Name</label>
+      <input [(ngModel)]="model.name" name="name" />
+
+      <label>Category</label>
+      <select [(ngModel)]="model.category" name="category">
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Database">Database</option>
+      </select>
+
+      <label>Level: {{ model.level }}%</label>
+      <input type="range" min="0" max="100" [(ngModel)]="model.level" name="level" />
+
+      <button type="button" class="primary-wide" (click)="submit()">
+        Save Skill
+      </button>
+    </div>
+  </div>
+</div>

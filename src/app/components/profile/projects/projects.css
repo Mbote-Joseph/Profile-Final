@@ -1,0 +1,145 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.projects-section {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 800;
+  color: rgba(155, 135, 255, 0.95);
+  margin-bottom: 36px;
+}
+
+/* Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+/* Card */
+.project-card {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Content */
+.project-content {
+  padding: 22px 24px 26px;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #6cb2ff;
+  margin: 0 0 10px;
+}
+
+.project-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 18px;
+}
+
+/* Tech pills */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 18px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.link.code {
+  color: #6cb2ff;
+}
+
+.link.demo {
+  color: #c084fc;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image img {
+    height: 220px;
+  }
+}

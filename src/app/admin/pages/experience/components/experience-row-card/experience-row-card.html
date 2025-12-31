@@ -1,0 +1,13 @@
+<div class="row-card">
+  <div class="content">
+    <div class="title">{{ experience.position }}</div>
+    <div class="company">{{ experience.company }}</div>
+    <div class="period">{{ experience.period }}</div>
+    <div class="desc">{{ experience.description }}</div>
+  </div>
+
+  <div class="actions">
+    <button class="icon-btn" (click)="edit.emit(experience)">💾</button>
+    <button class="icon-btn danger" (click)="remove.emit(experience.id)">🗑️</button>
+  </div>
+</div>

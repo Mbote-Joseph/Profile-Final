@@ -1,0 +1,145 @@
+/**
+ * Copyright 2025 josephmbote
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+.center {
+  text-align: center;
+  transform: translateY(-10px);
+}
+
+/* .avatar-ring {
+  width: 132px;
+  height: 132px;
+  border-radius: 999px;
+  padding: 5px;
+  margin: 0 auto 16px;
+
+  background: radial-gradient(circle at 30% 30%, #4f7cff, #2f5bff);
+  box-shadow: 0 0 0 2px rgba(90, 150, 255, 0.25), 0 18px 35px rgba(0,0,0,0.4);
+} */
+
+.avatar {
+  width: 50%;
+  height: 50%;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  border: 5px solid #4f7cff;
+  margin: 0 auto auto;
+}
+
+.name {
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 6px 0 8px;
+}
+
+.name .first {
+  background: linear-gradient(90deg, #7aa8ff, #5e7dff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.name .last {
+  background: linear-gradient(90deg, #8d76ff, #b14bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.2px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* Download button top-right */
+.download-btn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+
+  background: linear-gradient(135deg, #4f7cff, #8b3dff);
+  box-shadow: 0 10px 25px rgba(120, 80, 255, 0.35),
+              inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.download-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(120, 80, 255, 0.45);
+  filter: brightness(1.03);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+}
+

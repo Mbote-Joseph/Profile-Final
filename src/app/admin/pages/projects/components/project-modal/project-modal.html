@@ -1,0 +1,23 @@
+<app-modal-shell [title]="titleText" (close)="close.emit()">
+  <label>Project Title</label>
+  <input [(ngModel)]="model.title" name="title">
+
+  <label>Description</label>
+  <textarea [(ngModel)]="model.description" name="desc"></textarea>
+
+  <label>Technologies (comma-separated)</label>
+  <input [(ngModel)]="model.technologiesText" name="tech">
+
+  <label>Image URL</label>
+  <input [(ngModel)]="model.imageUrl" name="img">
+
+  <label>GitHub URL</label>
+  <input [(ngModel)]="model.githubUrl" name="git">
+
+  <label>Live URL</label>
+  <input [(ngModel)]="model.liveUrl" name="live">
+
+  <button class="primary-wide" type="button" (click)="submit()">
+    Save Project
+  </button>
+</app-modal-shell>

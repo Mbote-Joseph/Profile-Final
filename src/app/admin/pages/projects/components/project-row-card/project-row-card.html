@@ -1,0 +1,15 @@
+<div class="row-card">
+  <div class="content">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+    <div class="tags">
+      <span *ngFor="let t of project.technologies">{{ t }}</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="icon-btn" (click)="edit.emit(project)">💾</button>
+    <button class="icon-btn danger" (click)="remove.emit(project.id)">🗑️</button>
+  </div>
+</div>

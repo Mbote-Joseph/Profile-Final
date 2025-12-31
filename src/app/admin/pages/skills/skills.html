@@ -1,0 +1,24 @@
+<div class="page-head">
+  <h2>Skills</h2>
+
+  <button class="primary-btn" (click)="openAdd()">
+    + Add Skill
+  </button>
+</div>
+
+<div class="grid">
+  <app-skill-card
+    *ngFor="let s of skills"
+    [skill]="s"
+    (edit)="openEdit($event)"
+    (remove)="delete($event)"
+  ></app-skill-card>
+</div>
+
+<app-skill-modal
+  *ngIf="modalOpen"
+  [mode]="modalMode"
+  [initial]="selected"
+  (close)="close()"
+  (save)="save($event)"
+></app-skill-modal>

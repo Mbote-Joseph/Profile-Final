@@ -1,0 +1,20 @@
+<app-modal-shell title="Edit Experience" (close)="close.emit()">
+  <label>Position</label>
+  <input [(ngModel)]="model.position" name="position" />
+
+  <label>Company</label>
+  <input [(ngModel)]="model.company" name="company" />
+
+  <label>Period</label>
+  <input [(ngModel)]="model.period" name="period" />
+
+  <label>Description</label>
+  <textarea [(ngModel)]="model.description" name="desc"></textarea>
+
+  <label>Achievements (one per line)</label>
+  <textarea [(ngModel)]="model.achievementsText" name="ach"></textarea>
+
+  <button class="primary-wide" type="button" (click)="submit()">
+    Save Experience
+  </button>
+</app-modal-shell>
